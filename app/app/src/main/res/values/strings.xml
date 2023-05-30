@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">ProtoLight</string>
+    <string name="speed">Speed</string>
+    <string name="test_connect">Connection test</string>
+    <string name="btn_send">Send</string>
+    <string name="btn_color">Color</string>
+    <string name="btn_color2">Select</string>
+    <string name="menu_setup">Settings</string>
+    <string name="menu_save">Save configure</string>
+    <string name="menu_manual">Manual</string>
+    <string name="effect">Effect</string>
+    <string name="partition">Zoning</string>
+    <string name="ssid">SSID:</string>
+    <string name="pass">Password:</string>
+    <string name="led_count">LED count:</string>
+    <string name="btn_save">Save</string>
+    <string name="con_succ">Connect successful</string>
+    <string name="con_unsucc">Connect unsuccessful</string>
+
+    <string name="server_ip" translatable="false">192.168.4.1</string>
+
+    <string-array name="modes">
+        <item>0. Static</item>
+        <item>1. Blink</item>
+        <item>2. Breath</item>
+        <item>3. Color Wipe</item>
+        <item>4. Color Wipe Inverse</item>
+        <item>5. Color Wipe Reverse</item>
+        <item>6. Color Wipe Reverse Inverse</item>
+        <item>7. Color Wipe Random</item>
+        <item>8. Random Color</item>
+        <item>9. Single Dynamic</item>
+        <item>10. Multi Dynamic</item>
+        <item>11. Rainbow</item>
+        <item>12. Rainbow Cycle</item>
+        <item>13. Scan</item>
+        <item>14. Dual Scan</item>
+        <item>15. Fade</item>
+        <item>16. Theater Chase</item>
+        <item>17. Theater Chase Rainbow</item>
+        <item>18. Running Lights</item>
+        <item>19. Twinkle</item>
+        <item>20. Twinkle Random</item>
+        <item>21. Twinkle Fade</item>
+        <item>22. Twinkle Fade Random</item>
+        <item>23. Sparkle</item>
+        <item>24. Flash Sparkle</item>
+        <item>25. Hyper Sparkle</item>
+        <item>26. Strobe</item>
+        <item>27. Strobe Rainbow</item>
+        <item>28. Multi Strobe</item>
+        <item>29. Blink Rainbow</item>
+        <item>30. Chase White</item>
+        <item>31. Chase Color</item>
+        <item>32. Chase Random</item>
+        <item>33. Chase Rainbow</item>
+        <item>34. Chase Flash</item>
+        <item>35. Chase Flash Random</item>
+        <item>36. Chase Rainbow White</item>
+        <item>37. Chase Blackout</item>
+        <item>38. Chase Blackout Rainbow</item>
+        <item>39. Color Sweep Random</item>
+        <item>40. Running Color</item>
+        <item>41. Running Red Blue</item>
+        <item>42. Running Random</item>
+        <item>43. Larson Scanner</item>
+        <item>44. Comet</item>
+        <item>45. Fireworks</item>
+        <item>46. Fireworks Random</item>
+        <item>47. Merry Christmas</item>
+        <item>48. Fire Flicker</item>
+        <item>49. Fire Flicker (soft)</item>
+        <item>50. Fire Flicker (intense)</item>
+        <item>51. Circus Combustus</item>
+        <item>52. Halloween</item>
+        <item>53. Bicolor Chase</item>
+        <item>54. Tricolor Chase</item>
+        <item>55. TwinkleFOX</item>
+    </string-array>
+
+    <string name="manual">\t\tYou can turn the LED strip on and off using the button located at the
+        top of the screen.\n\n\t\t
+        «Zoning» - allows you to narrow the active part of the tape to 3/4, 1/2 or 1/4 of the total
+        length. With the help of the slider located below, it can be moved along the tape.\n\n\t\t
+        The menu item «Settings» - allows you to change the SSID, password, number of LEDs in the
+        strip, and interface language. The change takes place after clicking the «Save» button.
+        \n\n\t\t
+        The menu item «Save configuration» - allows you to save the current configuration (effect
+        number, brightness, speed and color). With these parameters, the device will start
+        immediately after switching on.
+    </string>
+</resources>

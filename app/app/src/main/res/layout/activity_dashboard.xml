@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drwltMenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    android:fontFamily="@font/namu"
+    tools:context=".DashboardActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/lltToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/ibtnMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0"
+                android:background="@drawable/standart_button"
+                android:onClick="onClickMenu"
+                app:srcCompat="@drawable/ic_baseline_menu_24" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/imvTitle"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo_text" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lltButtons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lltToolbar">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/ibtnOnOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:onClick="onClickOnOff"
+                app:srcCompat="@drawable/ic_baseline_lightbulb_on_24" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lltMode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lltButtons">
+
+            <TextView
+                android:id="@+id/txtvEffect"
+                style="@style/TextViewPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/effect"
+                android:fontFamily="@font/namu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spnrMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="always" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lltBrightness"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lltMode">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/ic_baseline_wb_sunny_24" />
+
+            <SeekBar
+                android:id="@+id/skbrBrightness"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:max="25"
+                android:progress="12"
+                android:progressTint="@color/teal_200"
+                android:thumb="@drawable/ic_baseline_panorama_fish_eye_24"
+                android:thumbTint="@color/teal_200" />
+
+        </LinearLayout>
+
+        <me.tankery.lib.circularseekbar.CircularSeekBar
+            android:id="@+id/cskbrSpeed"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="visible"
+            app:cs_circle_color="#A8A4A4"
+            app:cs_circle_progress_color="@color/teal_300"
+            app:cs_circle_stroke_width="30dp"
+            app:cs_circle_style="round"
+            app:cs_circle_x_radius="0dp"
+            app:cs_circle_y_radius="0dp"
+            app:cs_disable_pointer="false"
+
+            app:cs_lock_enabled="true"
+            app:cs_maintain_equal_circle="true"
+            app:cs_max="360"
+
+            app:cs_move_outside_circle="false"
+            app:cs_negative_enabled="false"
+            app:cs_pointer_color="#D5D2D2"
+            app:cs_pointer_halo_border_width="5dp"
+            app:cs_pointer_halo_color="#FF0048"
+            app:cs_pointer_halo_color_ontouch="#363639"
+            app:cs_pointer_halo_width="2dp"
+            app:cs_pointer_stroke_width="30dp"
+            app:cs_progress="0"
+
+            app:cs_use_custom_radii="false"
+            app:layout_constraintBottom_toBottomOf="@+id/colorPickerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lltBrightness" />
+
+        <TextView
+            android:id="@+id/txtvSpeed"
+            android:layout_width="158dp"
+            android:layout_height="104dp"
+            android:gravity="center"
+            android:fontFamily="@font/namu"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/cskbrSpeed"
+            app:layout_constraintEnd_toEndOf="@+id/cskbrSpeed"
+            app:layout_constraintStart_toStartOf="@+id/cskbrSpeed"
+            app:layout_constraintTop_toTopOf="@+id/cskbrSpeed" />
+
+        <com.flask.colorpicker.ColorPickerView
+            android:id="@+id/colorPickerView"
+            android:layout_width="262dp"
+            android:layout_height="262dp"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible"
+            app:density="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lltBrightness"
+            app:wheelType="FLOWER" />
+
+        <Button
+            android:id="@+id/btnColor"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:onClick="onClickColor"
+            android:backgroundTint="@color/button_bg_tint"
+            android:text="@string/btn_color"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:theme="@style/Widget.SmartLamp.Button"
+            app:strokeColor="@color/button_stroke"
+            app:strokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/colorPickerView" />
+
+        <LinearLayout
+            android:id="@+id/lltScale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnColor">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtvParition"
+                    style="@style/TextViewPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/partition"
+                    android:fontFamily="@font/namu"/>
+
+                <SeekBar
+                    android:id="@+id/skbrScalePartition"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="4"
+                    android:progress="4" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/skbrScalePosition"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/custom_seekbar"
+                android:max="100"
+                android:progress="50"
+                android:progressDrawable="@drawable/custom_seekbar"
+                android:splitTrack="false"
+                android:thumb="@drawable/custom_seekbar_thump4" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/menuNavigation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:itemTextAppearance="@style/NavigationDrawerStyle"
+        app:menu="@menu/navigation_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

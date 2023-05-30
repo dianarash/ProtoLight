@@ -1,0 +1,9 @@
+{
+  "ssid": "lampN000",
+  "pass": "12345678",
+  "ledcount": 20,
+  "mode": 5,
+  "brightness": 127,
+  "speed": 1000,
+  "color": 12265033
+}
